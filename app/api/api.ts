@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const req = axios.create({
-    baseURL: 'http://localhost:1000'
+    baseURL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:1000'
 });
 
 req.interceptors.request.use((config) => {
